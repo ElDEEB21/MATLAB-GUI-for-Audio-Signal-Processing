@@ -1,4 +1,4 @@
-function soundProcessingGUI
+function untitled
     % Create a figure and axes
     figure('Name', 'Sound Processing GUI', 'NumberTitle', 'off', 'Position', [100, 100, 600, 400]);
 
