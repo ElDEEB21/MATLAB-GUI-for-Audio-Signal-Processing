@@ -2,7 +2,7 @@ function generateBeep(~, ~)
     Fs = 44100;
     
     % ask the user for the duration of the beep sound
-    beep_duration = inputdlg('Enter beep duration in seconds:', 'Beep Duration', [1 50]);
+    beep_duration = inputdlg('Enter beep duration in seconds:', 'Beep Generation', [1 50]);
     
     if isempty(beep_duration)
         return;  % Cancel button clicked, do nothing
