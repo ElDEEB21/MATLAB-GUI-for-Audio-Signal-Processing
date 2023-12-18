@@ -1,9 +1,9 @@
 function untitled
     function addNoiseToFile(~, ~)
-        name_file = 'Enter the name for the noisy audio file (without extension):';
+        file_name = 'Enter the name for the noisy audio file (without extension):';
         head = 'Input';
         defaultinput = 'noisy_audio';
-        answer = inputdlg(name_file, head, 1, {defaultinput});
+        answer = inputdlg(file_name, head, 1, {defaultinput});
 
         if isempty(answer)
             return;
@@ -28,10 +28,10 @@ function untitled
     end
 
     function recordAndSave(~, ~)
-        name_file = 'Enter the name for the recorded audio file (without extension):';
+        file_name = 'Enter the name for the recorded audio file (without extension):';
         head = 'Input';
         defaultinput = 'recorded_audio';
-        answer = inputdlg(name_file, head, 1, {defaultinput});
+        answer = inputdlg(file_name, head, 1, {defaultinput});
 
         if isempty(answer)
             return;
