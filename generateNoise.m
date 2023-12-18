@@ -8,12 +8,12 @@ function generateNoise(~, ~)
         return;  % Cancel button clicked, do nothing
     end
     
-    % Convert string input to a numeric value, value is rounded since randn
-    % only accepts integers.
-    noise_duration = round(str2num(noise_duration{1}));
+    % Convert string input to a numeric value
+    noise_duration = str2num(noise_duration{1});
     
-    %Generate Random Noise for 1 second
-    noise = randn(noise_duration, fs);
+    %Generate Random Noise
+    noise = randn(1, noise_duration * fs);
     
+    % playing the generated noise sound
     sound(noise, fs);
 end

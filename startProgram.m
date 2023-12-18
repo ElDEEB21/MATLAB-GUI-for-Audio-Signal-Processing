@@ -16,5 +16,6 @@ function startProgram
     uicontrol('Style', 'pushbutton', 'String', 'Subtract', 'Position', [160, 250, 120, 30], 'Callback', @subtract, 'BackgroundColor', [0.8, 0.7, 0.9], 'FontWeight', 'bold');
     uicontrol('Style', 'pushbutton', 'String', 'Multiply', 'Position', [300, 250, 120, 30], 'Callback', @multiply, 'BackgroundColor', [0.9, 0.8, 0.7], 'FontWeight', 'bold');
     uicontrol('Style', 'pushbutton', 'String', 'Plot Signal', 'Position',  [440, 250, 120, 30], 'Callback', @plotSignal, 'BackgroundColor', [1.0, 0.9, 0.8], 'FontWeight', 'bold');
+    uicontrol('Style', 'pushbutton', 'String', 'Stop Playing', 'Position', [20, 200, 120, 30], 'Callback', @stop, 'BackgroundColor', [0.9, 0.5, 0.5], 'FontWeight', 'bold');
     
 end
