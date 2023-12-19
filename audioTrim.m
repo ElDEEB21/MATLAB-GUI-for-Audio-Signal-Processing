@@ -13,8 +13,7 @@ function audioTrim()
                   'Enter the end time of the interval to trim (in seconds):'};
         dlgTitle = 'Input for Time Interval';
         numLines = 1;
-        defaultVals = {'25', '50'};
-        inputValues = inputdlg(prompt, dlgTitle, numLines, defaultVals);
+        inputValues = inputdlg(prompt, dlgTitle, numLines);
 
         % Check if the user clicked Cancel
         if isempty(inputValues)
