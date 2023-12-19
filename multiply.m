@@ -17,11 +17,12 @@ function multiply(~, ~)
     % extracting values from the cell array [firstSignal]
     Begin = str2double(firstSignal{1});
     End = str2double(firstSignal{2});
+
+    % generating time and aplitude vectors of the first signal
     x1 = Begin:End;
     y1 = str2double(strsplit(firstSignal{3}));
     
-    % Create a window to get start point, end point, and the amplitude of
-    % the second signal
+    % Create a window to get start point, end point, and the amplitude of the second signal
     windowMessages = {'Start point of the second signal range', ...
                       'End point of the second signal range', ...
                       'Amplitude Values'};
@@ -34,9 +35,11 @@ function multiply(~, ~)
         return;
     end
     
-    % extracting values from the cell array [firstSignal]
+    % extracting values from the cell array [secondSignal]
     Begin = str2double(secondSignal{1});
     End = str2double(secondSignal{2});
+
+    % generating time and aplitude vectors of the second signal
     x2 = Begin:End;
     y2 = str2double(strsplit(secondSignal{3}));
     
@@ -63,7 +66,7 @@ function multiply(~, ~)
         y1 = [zeros(1, abs(x1(1) - x2(1))), y1];
     end
     
-    % aligning the amplitude vectors from the beginning
+    % aligning the amplitude vectors from the end
     if x1(end) < x2(end)
         y1 = [y1, zeros(1, abs(x1(end) - x2(end)))];
     elseif x1(end) > x2(end)

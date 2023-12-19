@@ -17,6 +17,8 @@ function subtract(~, ~)
     % extracting values from the cell array [firstSignal]
     Begin = str2double(firstSignal{1});
     End = str2double(firstSignal{2});
+
+    % generating time and amplitude vectors for the first signal
     x1 = Begin:End;
     y1 = str2double(strsplit(firstSignal{3}));
     
@@ -37,6 +39,8 @@ function subtract(~, ~)
     % extracting values from the cell array [firstSignal]
     Begin = str2double(secondSignal{1});
     End = str2double(secondSignal{2});
+
+    % generating time and amplitude vectors for the first signal
     x2 = Begin:End;
     y2 = str2double(strsplit(secondSignal{3}));
     
@@ -71,7 +75,7 @@ function subtract(~, ~)
     end
     
     % Subtraction Result vector
-    y = y1.*y2;
+    y = y1-y2;
     
     % Plotting the subtraction result
     subplot(2, 2, [3, 4]);

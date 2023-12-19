@@ -1,23 +1,23 @@
 function addNoiseToFile(~, ~)
         
     % Ask the user to select an audio file
-    [filename, filepath] = uigetfile('*.wav', 'Select Audio File');
+    [fileName, filePath] = uigetfile('*.wav', 'Select Audio File');
 
     % Check if the user has selected a file
-    if ~isequal(filename, 0)
+    if ~isequal(fileName, 0)
         % Load the selected audio file
-        [y, fs] = audioread(fullfile(filepath, filename));
+        [y, fs] = audioread(fullfile(filePath, fileName));
 
         % Add white noise to the audio
         noiseLevel = 0.1; % Adjust the noise level as needed
         noisyAudio = y + noiseLevel * randn(size(y));
 
         % Save the audio with noise
-        [outputFilename, outputFilePath] = uiputfile('*.wav', 'Save Noisy Audio As', 'noisy_audio.wav');
+        [outputFileName, outputFilePath] = uiputfile('*.wav', 'Save Noisy Audio As', 'noisy_audio.wav');
         
-        if ~isequal(outputFilename, 0)
-            audiowrite(fullfile(outputFilePath, outputFilename), noisyAudio, fs);
-            msgbox('Noisy audio saved successfully');
+        if ~isequal(outputFileName, 0)
+            audiowrite(fullfile(outputFilePath, outputFileName), noisyAudio, fs);
+            msgbox('Audio was saved successfully');
         else
             return; % Cancel button clicked, do nothing
         end

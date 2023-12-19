@@ -33,7 +33,7 @@ function recordAndSave(~, ~)
     if ~isequal(fileName, 0)
         fullPath = fullfile(filePath, fileName);
         
-        % Save the audion file in the specified path
+        % Save the audio file in the specified path
         audiowrite(fullPath, y, fs);
 
         msgbox('Recording was saved successfully');
