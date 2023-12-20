@@ -3,7 +3,7 @@ function plotSignal(~, ~)
     % Ask the user for choosing whether to provide a signal or to select a file
     choice = questdlg('Choose an option:', ...
                       'Signal Plotting Options', ...
-                      'Provide a Signal', 'Choose a File', 'Cancel', 'Provide Signal');
+                      'Provide a Signal', 'Choose a File', 'Cancel', 'Provide a Signal');
 
     % Handle the user's choice
     switch choice

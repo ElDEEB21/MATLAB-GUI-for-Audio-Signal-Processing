@@ -1,7 +1,7 @@
 function addNoiseToFile(~, ~)
         
     % Ask the user to select an audio file
-    [fileName, filePath] = uigetfile('*.wav', 'Select Audio File');
+    [fileName, filePath] = uigetfile('*.wav', 'Select an Audio File');
 
     % Check if the user has selected a file
     if ~isequal(fileName, 0)
