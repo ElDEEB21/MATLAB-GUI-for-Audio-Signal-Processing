@@ -9,7 +9,7 @@ function addNoiseToFile(~, ~)
         [y, fs] = audioread(fullfile(filePath, fileName));
 
         % Add white noise to the audio
-        noiseLevel = 0.1; % Adjust the noise level as needed
+        noiseLevel = 0.1;
         noisyAudio = y + noiseLevel * randn(size(y));
 
         % Save the audio with noise

@@ -9,7 +9,7 @@ function generateBeep(~, ~)
     end
     
     % Convert string input to a numeric value
-    beepDuration = str2num(beepDuration{1});
+    beepDuration = str2double(beepDuration{1});
     
     % Generate time vector
     x = 0:1/Fs:beepDuration;

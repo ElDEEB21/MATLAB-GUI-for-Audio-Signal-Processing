@@ -9,7 +9,7 @@ function generateNoise(~, ~)
     end
     
     % Convert string input to a numeric value
-    noiseDuration = str2num(noiseDuration{1});
+    noiseDuration = str2double(noiseDuration{1});
     
     %Generate Random Noise
     noise = randn(1, noiseDuration * fs);

@@ -6,7 +6,7 @@ function recordAndSave(~, ~)
     duration = str2double(duration{1});
 
     % if the user clicked the cancel button
-    if isequal(duration, 0)
+    if isempty(duration) || isnan(duration)
         return;
     end
 
@@ -39,3 +39,4 @@ function recordAndSave(~, ~)
 
         msgbox('Recording was saved successfully');
     end
+end

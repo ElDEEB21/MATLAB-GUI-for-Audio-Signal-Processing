@@ -66,11 +66,10 @@ function adjustSpeed(~, ~)
 
             close(WaitBar);
 
-            % Use audioread to directly read audio data from the file
-            audioFilePath = tempname + ".wav";  % Temporary file to store the recorded audio
-            audiowrite(audioFilePath, getaudiodata(recorder), fs);
-            [y, fs] = audioread(audioFilePath);
-            delete(audioFilePath);  % Delete temporary file
+            audioSignal = getaudiodata(recorder);
+            
+            y = audioSignal;
+            fs = recorder.SampleRate;
 
             % Ask the user to enter the speed factor.
             prompt = 'Enter the speed factor for adjusting the speed:';
