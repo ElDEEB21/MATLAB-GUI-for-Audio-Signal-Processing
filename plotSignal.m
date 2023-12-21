@@ -7,7 +7,7 @@ function plotSignal(~, ~)
 
     % Handle the user's choice
     switch choice
-        case 'Provide Signal'
+        case 'Provide a Signal'
             % Create a window to get start point, end point, and the amplitude of the signal
             windowMessage = {'Start point of the time range', ...
                              'End point of the time range', ...
@@ -33,7 +33,7 @@ function plotSignal(~, ~)
             title('Signal');
             xlabel('Time');
             ylabel('Amplitude');
-        case 'Choose File'
+        case 'Choose a File'
             % Ask the user to choose a file
             [fileName, filePath] = uigetfile('*.wav', 'Select Wav File');
             if ~isequal(fileName, 0)
