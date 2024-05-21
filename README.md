@@ -36,4 +36,4 @@ Contributions are welcome! If you'd like to improve or add new features to the p
 
 ---
 
-Enjoy exploring and enhancing your audio processing skills with these MATLAB scripts!
+Enjoy exploring and enhancing your audio processing skills with these MATLAB scripts, Good Luck! (: 
